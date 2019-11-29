@@ -1,0 +1,1092 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3069F4A6237D6F9900AB4841 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE2C7A720EBAF450025D26A /* Main.storyboard */; };
+		30982FEF21999CE50030F16B /* paytabs-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30982FED21999CE50030F16B /* paytabs-iOS.framework */; };
+		30982FF021999CE50030F16B /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 30982FEE21999CE50030F16B /* Resources.bundle */; };
+		30982FF72199D1C00030F16B /* PTSRConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30982FF62199D1C00030F16B /* PTSRConstants.swift */; };
+		30A841EE219B2463003B87EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A841ED219B2463003B87EA /* LaunchScreen.storyboard */; };
+		7E6BEB96F3F403A66563D0AE /* Pods_GoGreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F82EF64CA731EA7FB18E8A /* Pods_GoGreen.framework */; };
+		ED2E972220EDE9F600498502 /* SidemenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E972120EDE9F600498502 /* SidemenuViewController.swift */; };
+		ED2E972420EDF5DB00498502 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E972320EDF5DB00498502 /* HomeVC.swift */; };
+		ED31F03C20EE2D9C00001414 /* LGSideMenuBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED31F02F20EE2D9B00001414 /* LGSideMenuBorderView.m */; };
+		ED31F03D20EE2D9C00001414 /* LGSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED31F03120EE2D9B00001414 /* LGSideMenuController.m */; };
+		ED31F03E20EE2D9C00001414 /* LGSideMenuGesturesHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = ED31F03320EE2D9B00001414 /* LGSideMenuGesturesHandler.m */; };
+		ED31F03F20EE2D9C00001414 /* LGSideMenuHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = ED31F03520EE2D9B00001414 /* LGSideMenuHelper.m */; };
+		ED31F04020EE2D9C00001414 /* LGSideMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = ED31F03720EE2D9B00001414 /* LGSideMenuSegue.m */; };
+		ED31F04120EE2D9C00001414 /* LGSideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED31F03920EE2D9B00001414 /* LGSideMenuView.m */; };
+		ED31F04220EE2D9C00001414 /* UIViewController+LGSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED31F03B20EE2D9B00001414 /* UIViewController+LGSideMenuController.m */; };
+		ED34F26D20F34EBC0055AE97 /* CarModelview.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED34F26C20F34EBC0055AE97 /* CarModelview.swift */; };
+		ED34F26F20F34F1A0055AE97 /* CarModelview.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED34F26E20F34F190055AE97 /* CarModelview.xib */; };
+		ED59CD1A218B033A00125EE1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED59CD17218B033A00125EE1 /* GoogleService-Info.plist */; };
+		ED68278720ECAA5D00570223 /* MonthlyBookingServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68278620ECAA5D00570223 /* MonthlyBookingServiceCell.swift */; };
+		ED68278920ECE05800570223 /* SelectedPackageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68278820ECE05800570223 /* SelectedPackageVC.swift */; };
+		ED87F90020F4D582006666D4 /* Apartmenyview.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED87F8FF20F4D582006666D4 /* Apartmenyview.xib */; };
+		ED87F90220F4D5F0006666D4 /* ApartmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED87F90120F4D5F0006666D4 /* ApartmentView.swift */; };
+		EDA209212112DA7400F83B3F /* MyOrderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA209202112DA7400F83B3F /* MyOrderDetailVC.swift */; };
+		EDA20923211318F600F83B3F /* Rateview.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDA20922211318F500F83B3F /* Rateview.xib */; };
+		EDA209252113192700F83B3F /* RatereView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA209242113192700F83B3F /* RatereView.swift */; };
+		EDA209292113500800F83B3F /* CashOnDeleveryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA209282113500800F83B3F /* CashOnDeleveryVC.swift */; };
+		EDCED0EC2108592800213530 /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCED0EB2108592800213530 /* ChangePasswordVC.swift */; };
+		EDD508492109F0CD0007ECA3 /* EditUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD508482109F0CD0007ECA3 /* EditUserVC.swift */; };
+		EDDCB28A20EC912000469B6B /* OnetimeBookserviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDCB28920EC912000469B6B /* OnetimeBookserviceCell.swift */; };
+		EDE2C7B520EBAF490025D26A /* Signupview.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDE2C79C20EBAF430025D26A /* Signupview.xib */; };
+		EDE2C7B620EBAF490025D26A /* BookServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C79D20EBAF440025D26A /* BookServiceVC.swift */; };
+		EDE2C7B820EBAF490025D26A /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C79F20EBAF440025D26A /* SignupVC.swift */; };
+		EDE2C7B920EBAF490025D26A /* EnterCarDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C7A020EBAF440025D26A /* EnterCarDetailVC.swift */; };
+		EDE2C7BA20EBAF490025D26A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C7A120EBAF440025D26A /* LoginVC.swift */; };
+		EDE2C7BB20EBAF490025D26A /* WrongNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C7A220EBAF440025D26A /* WrongNumberView.swift */; };
+		EDE2C7BE20EBAF490025D26A /* TutorialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C7A820EBAF450025D26A /* TutorialVC.swift */; };
+		EDE2C7BF20EBAF490025D26A /* wrongview.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDE2C7A920EBAF450025D26A /* wrongview.xib */; };
+		EDE2C7C020EBAF490025D26A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE2C7AA20EBAF450025D26A /* Assets.xcassets */; };
+		EDE2C7C120EBAF490025D26A /* GoGreenManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C7AB20EBAF450025D26A /* GoGreenManeger.swift */; };
+		EDE2C7C220EBAF490025D26A /* OrderConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C7AC20EBAF470025D26A /* OrderConfirmationVC.swift */; };
+		EDE2C7C320EBAF490025D26A /* LogoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C7AD20EBAF470025D26A /* LogoutVC.swift */; };
+		EDE2C7C420EBAF490025D26A /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDE2C7AF20EBAF480025D26A /* Montserrat-Light.otf */; };
+		EDE2C7C520EBAF490025D26A /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDE2C7B020EBAF480025D26A /* Montserrat-Regular.otf */; };
+		EDE2C7C620EBAF490025D26A /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C7B120EBAF480025D26A /* ForgotPasswordVC.swift */; };
+		EDE2C7C720EBAF490025D26A /* SMSVerificationphone.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C7B220EBAF480025D26A /* SMSVerificationphone.swift */; };
+		EDE2C7C820EBAF490025D26A /* Signupview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C7B420EBAF480025D26A /* Signupview.swift */; };
+		EDE2C7D220EBAF740025D26A /* CarListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C7C920EBAF740025D26A /* CarListVC.swift */; };
+		EDE2C7D320EBAF740025D26A /* SelectcityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C7CB20EBAF740025D26A /* SelectcityCell.swift */; };
+		EDE2C7D420EBAF740025D26A /* SelectionCityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C7CC20EBAF740025D26A /* SelectionCityVC.swift */; };
+		EDE2C7D520EBAF740025D26A /* HowitworkVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C7CD20EBAF740025D26A /* HowitworkVc.swift */; };
+		EDE2C7D620EBAF740025D26A /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C7CF20EBAF740025D26A /* APIConstant.swift */; };
+		EDE2C7D720EBAF740025D26A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C7D020EBAF740025D26A /* Reachability.swift */; };
+		EDE2C7D820EBAF740025D26A /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C7D120EBAF740025D26A /* ServiceManager.swift */; };
+		EDE2C7DD20EBB14E0025D26A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C7DC20EBB14E0025D26A /* AppDelegate.swift */; };
+		EDE5939C21351B2600DCFBBA /* Coupenview.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDE5939921351B2600DCFBBA /* Coupenview.xib */; };
+		EDE5939E21351B6500DCFBBA /* CoupenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5939D21351B6500DCFBBA /* CoupenView.swift */; };
+		EDE9049E21086508005AC311 /* TermsConditionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE9049D21086508005AC311 /* TermsConditionVC.swift */; };
+		EDEBEE2F214A3BC40083D485 /* AboutusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEBEE2E214A3BC40083D485 /* AboutusVC.swift */; };
+		EDEDEF3C212FEB89005C6CE1 /* FloatRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEDEF39212FEB88005C6CE1 /* FloatRatingView.swift */; };
+		EDF047CF20BC1CA8004EBDDA /* GoGreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF047CE20BC1CA8004EBDDA /* GoGreenTests.swift */; };
+		EDF047DA20BC1CA9004EBDDA /* GoGreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF047D920BC1CA9004EBDDA /* GoGreenUITests.swift */; };
+		EDF9655D2111971800D5F341 /* MyOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF9655C2111971800D5F341 /* MyOrderVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED068AB8211872D300BC842A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED068AB3211872D300BC842A /* INSPhotoGallery.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2EF35F11CB288F300033131;
+			remoteInfo = INSPhotoGallery;
+		};
+		ED068ABA211872D300BC842A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED068AB3211872D300BC842A /* INSPhotoGallery.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 642427261CDE10740037E8DA;
+			remoteInfo = INSPhotoGalleryFramework;
+		};
+		EDF047CB20BC1CA8004EBDDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDF047AE20BC1CA8004EBDDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDF047B520BC1CA8004EBDDA;
+			remoteInfo = GoGreen;
+		};
+		EDF047D620BC1CA8004EBDDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDF047AE20BC1CA8004EBDDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDF047B520BC1CA8004EBDDA;
+			remoteInfo = GoGreen;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		30015588225CB37B00912D9F /* GoGreen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GoGreen.entitlements; sourceTree = "<group>"; };
+		3041DED923829CA2003DDD25 /* GoGreen-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GoGreen-Bridging-Header.h"; sourceTree = "<group>"; };
+		30982FED21999CE50030F16B /* paytabs-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "paytabs-iOS.framework"; sourceTree = "<group>"; };
+		30982FEE21999CE50030F16B /* Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources.bundle; sourceTree = "<group>"; };
+		30982FF62199D1C00030F16B /* PTSRConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTSRConstants.swift; sourceTree = "<group>"; };
+		30A841ED219B2463003B87EA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5A4ABE58FD83DE868D2E53A2 /* Pods-GoGreen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoGreen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoGreen/Pods-GoGreen.debug.xcconfig"; sourceTree = "<group>"; };
+		7151399966B3DC73E5DBA772 /* Pods-GoGreen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoGreen.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoGreen/Pods-GoGreen.release.xcconfig"; sourceTree = "<group>"; };
+		85F82EF64CA731EA7FB18E8A /* Pods_GoGreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoGreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED068AB3211872D300BC842A /* INSPhotoGallery.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = INSPhotoGallery.xcodeproj; path = "../../../../Downloads/INSPhotoGallery-master/Example/INSPhotoGallery.xcodeproj"; sourceTree = "<group>"; };
+		ED2E972120EDE9F600498502 /* SidemenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidemenuViewController.swift; sourceTree = "<group>"; };
+		ED2E972320EDF5DB00498502 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		ED31F02E20EE2D9B00001414 /* LGSideMenuBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuBorderView.h; sourceTree = "<group>"; };
+		ED31F02F20EE2D9B00001414 /* LGSideMenuBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuBorderView.m; sourceTree = "<group>"; };
+		ED31F03020EE2D9B00001414 /* LGSideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuController.h; sourceTree = "<group>"; };
+		ED31F03120EE2D9B00001414 /* LGSideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuController.m; sourceTree = "<group>"; };
+		ED31F03220EE2D9B00001414 /* LGSideMenuGesturesHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuGesturesHandler.h; sourceTree = "<group>"; };
+		ED31F03320EE2D9B00001414 /* LGSideMenuGesturesHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuGesturesHandler.m; sourceTree = "<group>"; };
+		ED31F03420EE2D9B00001414 /* LGSideMenuHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuHelper.h; sourceTree = "<group>"; };
+		ED31F03520EE2D9B00001414 /* LGSideMenuHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuHelper.m; sourceTree = "<group>"; };
+		ED31F03620EE2D9B00001414 /* LGSideMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuSegue.h; sourceTree = "<group>"; };
+		ED31F03720EE2D9B00001414 /* LGSideMenuSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuSegue.m; sourceTree = "<group>"; };
+		ED31F03820EE2D9B00001414 /* LGSideMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuView.h; sourceTree = "<group>"; };
+		ED31F03920EE2D9B00001414 /* LGSideMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuView.m; sourceTree = "<group>"; };
+		ED31F03A20EE2D9B00001414 /* UIViewController+LGSideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LGSideMenuController.h"; sourceTree = "<group>"; };
+		ED31F03B20EE2D9B00001414 /* UIViewController+LGSideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LGSideMenuController.m"; sourceTree = "<group>"; };
+		ED34F26C20F34EBC0055AE97 /* CarModelview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModelview.swift; sourceTree = "<group>"; };
+		ED34F26E20F34F190055AE97 /* CarModelview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CarModelview.xib; path = GoGreen/CarModelview.xib; sourceTree = SOURCE_ROOT; };
+		ED59CD17218B033A00125EE1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ED68278620ECAA5D00570223 /* MonthlyBookingServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyBookingServiceCell.swift; sourceTree = "<group>"; };
+		ED68278820ECE05800570223 /* SelectedPackageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedPackageVC.swift; sourceTree = "<group>"; };
+		ED87F8FF20F4D582006666D4 /* Apartmenyview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Apartmenyview.xib; path = kl/Apartmenyview.xib; sourceTree = SOURCE_ROOT; };
+		ED87F90120F4D5F0006666D4 /* ApartmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApartmentView.swift; sourceTree = "<group>"; };
+		EDA209202112DA7400F83B3F /* MyOrderDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrderDetailVC.swift; sourceTree = "<group>"; };
+		EDA20922211318F500F83B3F /* Rateview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Rateview.xib; sourceTree = "<group>"; };
+		EDA209242113192700F83B3F /* RatereView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatereView.swift; sourceTree = "<group>"; };
+		EDA209282113500800F83B3F /* CashOnDeleveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashOnDeleveryVC.swift; sourceTree = "<group>"; };
+		EDCED0EB2108592800213530 /* ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
+		EDD508482109F0CD0007ECA3 /* EditUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserVC.swift; sourceTree = "<group>"; };
+		EDDCB28920EC912000469B6B /* OnetimeBookserviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnetimeBookserviceCell.swift; sourceTree = "<group>"; };
+		EDE2C79C20EBAF430025D26A /* Signupview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Signupview.xib; path = kl/Signupview.xib; sourceTree = SOURCE_ROOT; };
+		EDE2C79D20EBAF440025D26A /* BookServiceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookServiceVC.swift; path = kl/BookServiceVC.swift; sourceTree = SOURCE_ROOT; };
+		EDE2C79F20EBAF440025D26A /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupVC.swift; path = kl/SignupVC.swift; sourceTree = SOURCE_ROOT; };
+		EDE2C7A020EBAF440025D26A /* EnterCarDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnterCarDetailVC.swift; path = kl/EnterCarDetailVC.swift; sourceTree = SOURCE_ROOT; };
+		EDE2C7A120EBAF440025D26A /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginVC.swift; path = kl/LoginVC.swift; sourceTree = SOURCE_ROOT; };
+		EDE2C7A220EBAF440025D26A /* WrongNumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WrongNumberView.swift; path = kl/WrongNumberView.swift; sourceTree = SOURCE_ROOT; };
+		EDE2C7A720EBAF450025D26A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EDE2C7A820EBAF450025D26A /* TutorialVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TutorialVC.swift; path = kl/TutorialVC.swift; sourceTree = SOURCE_ROOT; };
+		EDE2C7A920EBAF450025D26A /* wrongview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = wrongview.xib; path = kl/wrongview.xib; sourceTree = SOURCE_ROOT; };
+		EDE2C7AA20EBAF450025D26A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = kl/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		EDE2C7AB20EBAF450025D26A /* GoGreenManeger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoGreenManeger.swift; path = kl/GoGreenManeger.swift; sourceTree = SOURCE_ROOT; };
+		EDE2C7AC20EBAF470025D26A /* OrderConfirmationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderConfirmationVC.swift; path = kl/OrderConfirmationVC.swift; sourceTree = SOURCE_ROOT; };
+		EDE2C7AD20EBAF470025D26A /* LogoutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogoutVC.swift; path = kl/LogoutVC.swift; sourceTree = SOURCE_ROOT; };
+		EDE2C7AF20EBAF480025D26A /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
+		EDE2C7B020EBAF480025D26A /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
+		EDE2C7B120EBAF480025D26A /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForgotPasswordVC.swift; path = kl/ForgotPasswordVC.swift; sourceTree = SOURCE_ROOT; };
+		EDE2C7B220EBAF480025D26A /* SMSVerificationphone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SMSVerificationphone.swift; path = GoGreen/SMSVerificationphone.swift; sourceTree = SOURCE_ROOT; };
+		EDE2C7B420EBAF480025D26A /* Signupview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Signupview.swift; path = kl/Signupview.swift; sourceTree = SOURCE_ROOT; };
+		EDE2C7C920EBAF740025D26A /* CarListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarListVC.swift; path = GoGreen/CarListVC.swift; sourceTree = SOURCE_ROOT; };
+		EDE2C7CB20EBAF740025D26A /* SelectcityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectcityCell.swift; sourceTree = "<group>"; };
+		EDE2C7CC20EBAF740025D26A /* SelectionCityVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionCityVC.swift; sourceTree = "<group>"; };
+		EDE2C7CD20EBAF740025D26A /* HowitworkVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HowitworkVc.swift; path = GoGreen/HowitworkVc.swift; sourceTree = SOURCE_ROOT; };
+		EDE2C7CF20EBAF740025D26A /* APIConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
+		EDE2C7D020EBAF740025D26A /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		EDE2C7D120EBAF740025D26A /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		EDE2C7DC20EBB14E0025D26A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EDE2C7E420EBB3600025D26A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDE5939921351B2600DCFBBA /* Coupenview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Coupenview.xib; sourceTree = "<group>"; };
+		EDE5939D21351B6500DCFBBA /* CoupenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupenView.swift; sourceTree = "<group>"; };
+		EDE9049D21086508005AC311 /* TermsConditionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionVC.swift; sourceTree = "<group>"; };
+		EDEBEE2E214A3BC40083D485 /* AboutusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutusVC.swift; sourceTree = "<group>"; };
+		EDEDEF39212FEB88005C6CE1 /* FloatRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatRatingView.swift; sourceTree = "<group>"; };
+		EDF047B620BC1CA8004EBDDA /* GoGreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoGreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDF047CA20BC1CA8004EBDDA /* GoGreenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoGreenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDF047CE20BC1CA8004EBDDA /* GoGreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoGreenTests.swift; sourceTree = "<group>"; };
+		EDF047D020BC1CA8004EBDDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDF047D520BC1CA8004EBDDA /* GoGreenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoGreenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDF047D920BC1CA9004EBDDA /* GoGreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoGreenUITests.swift; sourceTree = "<group>"; };
+		EDF047DB20BC1CA9004EBDDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDF9655C2111971800D5F341 /* MyOrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrderVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDF047B320BC1CA8004EBDDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E6BEB96F3F403A66563D0AE /* Pods_GoGreen.framework in Frameworks */,
+				30982FEF21999CE50030F16B /* paytabs-iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDF047C720BC1CA8004EBDDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDF047D220BC1CA8004EBDDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C2EC031A57A63B63AEFEF55 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A4ABE58FD83DE868D2E53A2 /* Pods-GoGreen.debug.xcconfig */,
+				7151399966B3DC73E5DBA772 /* Pods-GoGreen.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5F956E4E0BDD887FE1822D1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30982FED21999CE50030F16B /* paytabs-iOS.framework */,
+				30982FEE21999CE50030F16B /* Resources.bundle */,
+				85F82EF64CA731EA7FB18E8A /* Pods_GoGreen.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED068AB4211872D300BC842A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED068AB9211872D300BC842A /* INSPhotoGallery.app */,
+				ED068ABB211872D300BC842A /* INSPhotoGalleryFramework.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED31F02D20EE2D9B00001414 /* LGSideMenuController */ = {
+			isa = PBXGroup;
+			children = (
+				ED31F02E20EE2D9B00001414 /* LGSideMenuBorderView.h */,
+				ED31F02F20EE2D9B00001414 /* LGSideMenuBorderView.m */,
+				ED31F03020EE2D9B00001414 /* LGSideMenuController.h */,
+				ED31F03120EE2D9B00001414 /* LGSideMenuController.m */,
+				ED31F03220EE2D9B00001414 /* LGSideMenuGesturesHandler.h */,
+				ED31F03320EE2D9B00001414 /* LGSideMenuGesturesHandler.m */,
+				ED31F03420EE2D9B00001414 /* LGSideMenuHelper.h */,
+				ED31F03520EE2D9B00001414 /* LGSideMenuHelper.m */,
+				ED31F03620EE2D9B00001414 /* LGSideMenuSegue.h */,
+				ED31F03720EE2D9B00001414 /* LGSideMenuSegue.m */,
+				ED31F03820EE2D9B00001414 /* LGSideMenuView.h */,
+				ED31F03920EE2D9B00001414 /* LGSideMenuView.m */,
+				ED31F03A20EE2D9B00001414 /* UIViewController+LGSideMenuController.h */,
+				ED31F03B20EE2D9B00001414 /* UIViewController+LGSideMenuController.m */,
+			);
+			path = LGSideMenuController;
+			sourceTree = "<group>";
+		};
+		EDE2C7AE20EBAF480025D26A /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				EDE2C7AF20EBAF480025D26A /* Montserrat-Light.otf */,
+				EDE2C7B020EBAF480025D26A /* Montserrat-Regular.otf */,
+			);
+			name = Font;
+			path = kl/Font;
+			sourceTree = SOURCE_ROOT;
+		};
+		EDE2C7B320EBAF480025D26A /* Car Book & Enter Detail VC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Car Book & Enter Detail VC";
+			path = "kl/Car Book & Enter Detail VC";
+			sourceTree = SOURCE_ROOT;
+		};
+		EDE2C7CA20EBAF740025D26A /* Select Location View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EDE2C7CB20EBAF740025D26A /* SelectcityCell.swift */,
+				EDE2C7CC20EBAF740025D26A /* SelectionCityVC.swift */,
+			);
+			name = "Select Location View Controller";
+			path = "GoGreen/Select Location View Controller";
+			sourceTree = SOURCE_ROOT;
+		};
+		EDE2C7CE20EBAF740025D26A /* Supporting Classes */ = {
+			isa = PBXGroup;
+			children = (
+				30982FF62199D1C00030F16B /* PTSRConstants.swift */,
+				EDEDEF39212FEB88005C6CE1 /* FloatRatingView.swift */,
+				EDE2C7CF20EBAF740025D26A /* APIConstant.swift */,
+				EDE2C7D020EBAF740025D26A /* Reachability.swift */,
+				EDE2C7D120EBAF740025D26A /* ServiceManager.swift */,
+			);
+			name = "Supporting Classes";
+			path = "GoGreen/Supporting Classes";
+			sourceTree = SOURCE_ROOT;
+		};
+		EDF047AD20BC1CA7004EBDDA = {
+			isa = PBXGroup;
+			children = (
+				EDF047B820BC1CA8004EBDDA /* GoGreen */,
+				EDF047CD20BC1CA8004EBDDA /* GoGreenTests */,
+				EDF047D820BC1CA8004EBDDA /* GoGreenUITests */,
+				EDF047B720BC1CA8004EBDDA /* Products */,
+				2C2EC031A57A63B63AEFEF55 /* Pods */,
+				5F956E4E0BDD887FE1822D1D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EDF047B720BC1CA8004EBDDA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDF047B620BC1CA8004EBDDA /* GoGreen.app */,
+				EDF047CA20BC1CA8004EBDDA /* GoGreenTests.xctest */,
+				EDF047D520BC1CA8004EBDDA /* GoGreenUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDF047B820BC1CA8004EBDDA /* GoGreen */ = {
+			isa = PBXGroup;
+			children = (
+				30015588225CB37B00912D9F /* GoGreen.entitlements */,
+				ED31F02D20EE2D9B00001414 /* LGSideMenuController */,
+				EDE2C7AA20EBAF450025D26A /* Assets.xcassets */,
+				EDE2C7DC20EBB14E0025D26A /* AppDelegate.swift */,
+				EDE2C7B320EBAF480025D26A /* Car Book & Enter Detail VC */,
+				EDE2C7AE20EBAF480025D26A /* Font */,
+				EDE2C7B120EBAF480025D26A /* ForgotPasswordVC.swift */,
+				EDE2C7C920EBAF740025D26A /* CarListVC.swift */,
+				ED2E972120EDE9F600498502 /* SidemenuViewController.swift */,
+				EDE2C7CD20EBAF740025D26A /* HowitworkVc.swift */,
+				EDE2C7CA20EBAF740025D26A /* Select Location View Controller */,
+				EDE2C7CE20EBAF740025D26A /* Supporting Classes */,
+				EDE2C7AB20EBAF450025D26A /* GoGreenManeger.swift */,
+				EDE2C7B220EBAF480025D26A /* SMSVerificationphone.swift */,
+				EDE2C7E420EBB3600025D26A /* Info.plist */,
+				ED59CD17218B033A00125EE1 /* GoogleService-Info.plist */,
+				EDE2C7A120EBAF440025D26A /* LoginVC.swift */,
+				EDE2C7AD20EBAF470025D26A /* LogoutVC.swift */,
+				EDE2C7AC20EBAF470025D26A /* OrderConfirmationVC.swift */,
+				EDE2C79F20EBAF440025D26A /* SignupVC.swift */,
+				EDE2C7B420EBAF480025D26A /* Signupview.swift */,
+				EDE2C7A020EBAF440025D26A /* EnterCarDetailVC.swift */,
+				EDDCB28920EC912000469B6B /* OnetimeBookserviceCell.swift */,
+				ED68278620ECAA5D00570223 /* MonthlyBookingServiceCell.swift */,
+				ED68278820ECE05800570223 /* SelectedPackageVC.swift */,
+				EDE2C79D20EBAF440025D26A /* BookServiceVC.swift */,
+				EDE2C79C20EBAF430025D26A /* Signupview.xib */,
+				ED34F26E20F34F190055AE97 /* CarModelview.xib */,
+				EDE2C7A920EBAF450025D26A /* wrongview.xib */,
+				30A841ED219B2463003B87EA /* LaunchScreen.storyboard */,
+				EDE2C7A720EBAF450025D26A /* Main.storyboard */,
+				ED87F8FF20F4D582006666D4 /* Apartmenyview.xib */,
+				ED87F90120F4D5F0006666D4 /* ApartmentView.swift */,
+				EDE2C7A820EBAF450025D26A /* TutorialVC.swift */,
+				EDE2C7A220EBAF440025D26A /* WrongNumberView.swift */,
+				ED2E972320EDF5DB00498502 /* HomeVC.swift */,
+				ED34F26C20F34EBC0055AE97 /* CarModelview.swift */,
+				EDCED0EB2108592800213530 /* ChangePasswordVC.swift */,
+				EDE9049D21086508005AC311 /* TermsConditionVC.swift */,
+				EDD508482109F0CD0007ECA3 /* EditUserVC.swift */,
+				EDA20922211318F500F83B3F /* Rateview.xib */,
+				EDF9655C2111971800D5F341 /* MyOrderVC.swift */,
+				EDA209202112DA7400F83B3F /* MyOrderDetailVC.swift */,
+				EDA209242113192700F83B3F /* RatereView.swift */,
+				EDA209282113500800F83B3F /* CashOnDeleveryVC.swift */,
+				EDE5939921351B2600DCFBBA /* Coupenview.xib */,
+				EDE5939D21351B6500DCFBBA /* CoupenView.swift */,
+				EDEBEE2E214A3BC40083D485 /* AboutusVC.swift */,
+				3041DED923829CA2003DDD25 /* GoGreen-Bridging-Header.h */,
+			);
+			path = GoGreen;
+			sourceTree = "<group>";
+		};
+		EDF047CD20BC1CA8004EBDDA /* GoGreenTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED068AB3211872D300BC842A /* INSPhotoGallery.xcodeproj */,
+				EDF047CE20BC1CA8004EBDDA /* GoGreenTests.swift */,
+				EDF047D020BC1CA8004EBDDA /* Info.plist */,
+			);
+			path = GoGreenTests;
+			sourceTree = "<group>";
+		};
+		EDF047D820BC1CA8004EBDDA /* GoGreenUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EDF047D920BC1CA9004EBDDA /* GoGreenUITests.swift */,
+				EDF047DB20BC1CA9004EBDDA /* Info.plist */,
+			);
+			path = GoGreenUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDF047B520BC1CA8004EBDDA /* GoGreen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDF047DE20BC1CA9004EBDDA /* Build configuration list for PBXNativeTarget "GoGreen" */;
+			buildPhases = (
+				25300E6746567DB7F4CB1700 /* [CP] Check Pods Manifest.lock */,
+				EDF047B220BC1CA8004EBDDA /* Sources */,
+				EDF047B320BC1CA8004EBDDA /* Frameworks */,
+				EDF047B420BC1CA8004EBDDA /* Resources */,
+				EDCED0EA2108407F00213530 /* ShellScript */,
+				28ABF5E6895CA527D9294628 /* [CP] Embed Pods Frameworks */,
+				6B955F797B245F8827FB02D3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoGreen;
+			productName = GoGreen;
+			productReference = EDF047B620BC1CA8004EBDDA /* GoGreen.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EDF047C920BC1CA8004EBDDA /* GoGreenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDF047E120BC1CA9004EBDDA /* Build configuration list for PBXNativeTarget "GoGreenTests" */;
+			buildPhases = (
+				EDF047C620BC1CA8004EBDDA /* Sources */,
+				EDF047C720BC1CA8004EBDDA /* Frameworks */,
+				EDF047C820BC1CA8004EBDDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDF047CC20BC1CA8004EBDDA /* PBXTargetDependency */,
+			);
+			name = GoGreenTests;
+			productName = GoGreenTests;
+			productReference = EDF047CA20BC1CA8004EBDDA /* GoGreenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EDF047D420BC1CA8004EBDDA /* GoGreenUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDF047E420BC1CA9004EBDDA /* Build configuration list for PBXNativeTarget "GoGreenUITests" */;
+			buildPhases = (
+				EDF047D120BC1CA8004EBDDA /* Sources */,
+				EDF047D220BC1CA8004EBDDA /* Frameworks */,
+				EDF047D320BC1CA8004EBDDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDF047D720BC1CA8004EBDDA /* PBXTargetDependency */,
+			);
+			name = GoGreenUITests;
+			productName = GoGreenUITests;
+			productReference = EDF047D520BC1CA8004EBDDA /* GoGreenUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDF047AE20BC1CA8004EBDDA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Sonu;
+				TargetAttributes = {
+					EDF047B520BC1CA8004EBDDA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					EDF047C920BC1CA8004EBDDA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EDF047B520BC1CA8004EBDDA;
+					};
+					EDF047D420BC1CA8004EBDDA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EDF047B520BC1CA8004EBDDA;
+					};
+				};
+			};
+			buildConfigurationList = EDF047B120BC1CA8004EBDDA /* Build configuration list for PBXProject "GoGreen" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDF047AD20BC1CA7004EBDDA;
+			productRefGroup = EDF047B720BC1CA8004EBDDA /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = ED068AB4211872D300BC842A /* Products */;
+					ProjectRef = ED068AB3211872D300BC842A /* INSPhotoGallery.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				EDF047B520BC1CA8004EBDDA /* GoGreen */,
+				EDF047C920BC1CA8004EBDDA /* GoGreenTests */,
+				EDF047D420BC1CA8004EBDDA /* GoGreenUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		ED068AB9211872D300BC842A /* INSPhotoGallery.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = INSPhotoGallery.app;
+			remoteRef = ED068AB8211872D300BC842A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ED068ABB211872D300BC842A /* INSPhotoGalleryFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = INSPhotoGalleryFramework.framework;
+			remoteRef = ED068ABA211872D300BC842A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDF047B420BC1CA8004EBDDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED87F90020F4D582006666D4 /* Apartmenyview.xib in Resources */,
+				EDE2C7B520EBAF490025D26A /* Signupview.xib in Resources */,
+				ED34F26F20F34F1A0055AE97 /* CarModelview.xib in Resources */,
+				EDE2C7BF20EBAF490025D26A /* wrongview.xib in Resources */,
+				ED59CD1A218B033A00125EE1 /* GoogleService-Info.plist in Resources */,
+				EDE2C7C420EBAF490025D26A /* Montserrat-Light.otf in Resources */,
+				EDE2C7C020EBAF490025D26A /* Assets.xcassets in Resources */,
+				30A841EE219B2463003B87EA /* LaunchScreen.storyboard in Resources */,
+				30982FF021999CE50030F16B /* Resources.bundle in Resources */,
+				EDA20923211318F600F83B3F /* Rateview.xib in Resources */,
+				EDE2C7C520EBAF490025D26A /* Montserrat-Regular.otf in Resources */,
+				3069F4A6237D6F9900AB4841 /* Main.storyboard in Resources */,
+				EDE5939C21351B2600DCFBBA /* Coupenview.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDF047C820BC1CA8004EBDDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDF047D320BC1CA8004EBDDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25300E6746567DB7F4CB1700 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoGreen-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		28ABF5E6895CA527D9294628 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoGreen/Pods-GoGreen-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/AKSideMenu/AKSideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/BIObjCHelpers/BIObjCHelpers.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/CountryPickerSwift/CountryPicker.framework",
+				"${BUILT_PRODUCTS_DIR}/DGActivityIndicatorView/DGActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/FloatRatingView/FloatRatingView.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Lockbox/Lockbox.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Mantle/Mantle.framework",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/PullToRefresher/PullToRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SBJson/SBJson.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SinchVerification-Swift/SinchVerification.framework",
+				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
+				"${BUILT_PRODUCTS_DIR}/YLGIFImage/YLGIFImage.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AKSideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BIObjCHelpers.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CountryPicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FloatRatingView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lockbox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mantle.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PullToRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SBJson.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SinchVerification.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YLGIFImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoGreen/Pods-GoGreen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B955F797B245F8827FB02D3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoGreen/Pods-GoGreen-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoGreen/Pods-GoGreen-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDCED0EA2108407F00213530 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 0846480d47b20f67bb57a106740c3632773ea662 e9f84242b214682dbfe707161b09563ffecc6173902867f67bed963f7bdf10e5";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDF047B220BC1CA8004EBDDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE2C7D720EBAF740025D26A /* Reachability.swift in Sources */,
+				EDE2C7BA20EBAF490025D26A /* LoginVC.swift in Sources */,
+				ED31F03D20EE2D9C00001414 /* LGSideMenuController.m in Sources */,
+				EDE2C7B620EBAF490025D26A /* BookServiceVC.swift in Sources */,
+				ED31F04020EE2D9C00001414 /* LGSideMenuSegue.m in Sources */,
+				EDEDEF3C212FEB89005C6CE1 /* FloatRatingView.swift in Sources */,
+				EDA209212112DA7400F83B3F /* MyOrderDetailVC.swift in Sources */,
+				EDE2C7C120EBAF490025D26A /* GoGreenManeger.swift in Sources */,
+				ED34F26D20F34EBC0055AE97 /* CarModelview.swift in Sources */,
+				ED68278920ECE05800570223 /* SelectedPackageVC.swift in Sources */,
+				EDE2C7D320EBAF740025D26A /* SelectcityCell.swift in Sources */,
+				ED68278720ECAA5D00570223 /* MonthlyBookingServiceCell.swift in Sources */,
+				EDA209292113500800F83B3F /* CashOnDeleveryVC.swift in Sources */,
+				EDE2C7D220EBAF740025D26A /* CarListVC.swift in Sources */,
+				EDF9655D2111971800D5F341 /* MyOrderVC.swift in Sources */,
+				EDEBEE2F214A3BC40083D485 /* AboutusVC.swift in Sources */,
+				ED2E972220EDE9F600498502 /* SidemenuViewController.swift in Sources */,
+				EDE2C7BE20EBAF490025D26A /* TutorialVC.swift in Sources */,
+				EDE2C7D820EBAF740025D26A /* ServiceManager.swift in Sources */,
+				EDE2C7DD20EBB14E0025D26A /* AppDelegate.swift in Sources */,
+				EDE2C7C620EBAF490025D26A /* ForgotPasswordVC.swift in Sources */,
+				EDE2C7C220EBAF490025D26A /* OrderConfirmationVC.swift in Sources */,
+				ED31F03E20EE2D9C00001414 /* LGSideMenuGesturesHandler.m in Sources */,
+				EDDCB28A20EC912000469B6B /* OnetimeBookserviceCell.swift in Sources */,
+				ED87F90220F4D5F0006666D4 /* ApartmentView.swift in Sources */,
+				EDE2C7D520EBAF740025D26A /* HowitworkVc.swift in Sources */,
+				EDE9049E21086508005AC311 /* TermsConditionVC.swift in Sources */,
+				EDE2C7D420EBAF740025D26A /* SelectionCityVC.swift in Sources */,
+				EDE2C7D620EBAF740025D26A /* APIConstant.swift in Sources */,
+				EDE2C7BB20EBAF490025D26A /* WrongNumberView.swift in Sources */,
+				EDE2C7C320EBAF490025D26A /* LogoutVC.swift in Sources */,
+				EDE2C7B820EBAF490025D26A /* SignupVC.swift in Sources */,
+				EDE5939E21351B6500DCFBBA /* CoupenView.swift in Sources */,
+				ED31F03F20EE2D9C00001414 /* LGSideMenuHelper.m in Sources */,
+				EDCED0EC2108592800213530 /* ChangePasswordVC.swift in Sources */,
+				ED31F03C20EE2D9C00001414 /* LGSideMenuBorderView.m in Sources */,
+				ED2E972420EDF5DB00498502 /* HomeVC.swift in Sources */,
+				30982FF72199D1C00030F16B /* PTSRConstants.swift in Sources */,
+				ED31F04220EE2D9C00001414 /* UIViewController+LGSideMenuController.m in Sources */,
+				EDE2C7C820EBAF490025D26A /* Signupview.swift in Sources */,
+				EDA209252113192700F83B3F /* RatereView.swift in Sources */,
+				EDE2C7C720EBAF490025D26A /* SMSVerificationphone.swift in Sources */,
+				ED31F04120EE2D9C00001414 /* LGSideMenuView.m in Sources */,
+				EDE2C7B920EBAF490025D26A /* EnterCarDetailVC.swift in Sources */,
+				EDD508492109F0CD0007ECA3 /* EditUserVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDF047C620BC1CA8004EBDDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDF047CF20BC1CA8004EBDDA /* GoGreenTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDF047D120BC1CA8004EBDDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDF047DA20BC1CA9004EBDDA /* GoGreenUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDF047CC20BC1CA8004EBDDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDF047B520BC1CA8004EBDDA /* GoGreen */;
+			targetProxy = EDF047CB20BC1CA8004EBDDA /* PBXContainerItemProxy */;
+		};
+		EDF047D720BC1CA8004EBDDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDF047B520BC1CA8004EBDDA /* GoGreen */;
+			targetProxy = EDF047D620BC1CA8004EBDDA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EDF047DC20BC1CA9004EBDDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EDF047DD20BC1CA9004EBDDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDF047DF20BC1CA9004EBDDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A4ABE58FD83DE868D2E53A2 /* Pods-GoGreen.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GoGreen/GoGreen.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 33S5BD7X5H;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = GoGreen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GoGreen/Demo\\ Merchants",
+					"$(PROJECT_DIR)/GoGreen/PayTabsDemo",
+					"$(PROJECT_DIR)/GoGreen/Demo\\ Merchants",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/GoGreen/Demo\\ Merchants",
+					"$(PROJECT_DIR)/GoGreen/Demo\\ Merchants",
+					"$(PROJECT_DIR)/GoGreen/Demo\\ Merchants",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ripen.gogreen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/GoGreen-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EDF047E020BC1CA9004EBDDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7151399966B3DC73E5DBA772 /* Pods-GoGreen.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GoGreen/GoGreen.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 33S5BD7X5H;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = GoGreen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GoGreen/Demo\\ Merchants",
+					"$(PROJECT_DIR)/GoGreen/PayTabsDemo",
+					"$(PROJECT_DIR)/GoGreen/Demo\\ Merchants",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/GoGreen/Demo\\ Merchants",
+					"$(PROJECT_DIR)/GoGreen/Demo\\ Merchants",
+					"$(PROJECT_DIR)/GoGreen/Demo\\ Merchants",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ripen.gogreen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/GoGreen-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		EDF047E220BC1CA9004EBDDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoGreenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ripen.com.GoGreenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoGreen.app/GoGreen";
+			};
+			name = Debug;
+		};
+		EDF047E320BC1CA9004EBDDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoGreenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ripen.com.GoGreenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoGreen.app/GoGreen";
+			};
+			name = Release;
+		};
+		EDF047E520BC1CA9004EBDDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoGreenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ripen.com.GoGreenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GoGreen;
+			};
+			name = Debug;
+		};
+		EDF047E620BC1CA9004EBDDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoGreenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ripen.com.GoGreenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GoGreen;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDF047B120BC1CA8004EBDDA /* Build configuration list for PBXProject "GoGreen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDF047DC20BC1CA9004EBDDA /* Debug */,
+				EDF047DD20BC1CA9004EBDDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDF047DE20BC1CA9004EBDDA /* Build configuration list for PBXNativeTarget "GoGreen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDF047DF20BC1CA9004EBDDA /* Debug */,
+				EDF047E020BC1CA9004EBDDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDF047E120BC1CA9004EBDDA /* Build configuration list for PBXNativeTarget "GoGreenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDF047E220BC1CA9004EBDDA /* Debug */,
+				EDF047E320BC1CA9004EBDDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDF047E420BC1CA9004EBDDA /* Build configuration list for PBXNativeTarget "GoGreenUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDF047E520BC1CA9004EBDDA /* Debug */,
+				EDF047E620BC1CA9004EBDDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDF047AE20BC1CA8004EBDDA /* Project object */;
+}

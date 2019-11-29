@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Light.otf">
+            <string>Montserrat-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="39M-dY-Vlz" customClass="CoupenView" customModule="GoGreen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mT4-pj-RM7">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQP-xc-7HA">
+                            <rect key="frame" x="16" y="134" width="288" height="300"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIa-xW-z2z">
+                                    <rect key="frame" x="64" y="201" width="160" height="40"/>
+                                    <color key="backgroundColor" red="0.36470588240000001" green="0.62352941179999999" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="LQO-9v-j9B"/>
+                                        <constraint firstAttribute="width" constant="160" id="aRg-Sb-52g"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                    <state key="normal" title="Submit">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="TaptoSubmitbtnWithSender:" destination="39M-dY-Vlz" eventType="touchUpInside" id="Ebg-2G-y31"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRM-nZ-Rmb">
+                                    <rect key="frame" x="0.0" y="0.0" width="288" height="60"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Coupon Detail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQy-cy-QCp">
+                                            <rect key="frame" x="59" y="20" width="170" height="20.5"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QcW-w7-8ZL">
+                                            <rect key="frame" x="248" y="13.5" width="30" height="33"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <state key="normal" title="X">
+                                                <color key="titleColor" red="0.29803921570000003" green="0.63137254899999995" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="TaptoCrossbtnWithSender:" destination="39M-dY-Vlz" eventType="touchUpInside" id="Q3I-3x-Vod"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="QcW-w7-8ZL" secondAttribute="trailing" constant="10" id="7z9-AJ-26P"/>
+                                        <constraint firstItem="QcW-w7-8ZL" firstAttribute="centerY" secondItem="IQy-cy-QCp" secondAttribute="centerY" id="TBn-pn-tZI"/>
+                                        <constraint firstItem="IQy-cy-QCp" firstAttribute="centerX" secondItem="cRM-nZ-Rmb" secondAttribute="centerX" id="VqR-2N-JRU"/>
+                                        <constraint firstItem="IQy-cy-QCp" firstAttribute="centerY" secondItem="cRM-nZ-Rmb" secondAttribute="centerY" id="sg4-sj-yej"/>
+                                        <constraint firstAttribute="height" constant="60" id="vJ4-bZ-aRZ"/>
+                                    </constraints>
+                                </view>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Coupon Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JiQ-gB-sPP">
+                                    <rect key="frame" x="20" y="116" width="248" height="35"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="35" id="5jN-Uq-hJw"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coupon Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5R-Jo-38s">
+                                    <rect key="frame" x="45" y="89" width="88" height="16"/>
+                                    <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="13"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cupon_code" translatesAutoresizingMaskIntoConstraints="NO" id="rIG-cE-LRW">
+                                    <rect key="frame" x="10" y="89" width="25" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="25" id="WBv-pG-ZD2"/>
+                                        <constraint firstAttribute="height" constant="25" id="udY-jQ-VSG"/>
+                                    </constraints>
+                                </imageView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LKb-hY-IZc">
+                                    <rect key="frame" x="20" y="152" width="248" height="1"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="Vic-MX-n63"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="rIG-cE-LRW" firstAttribute="leading" secondItem="MQP-xc-7HA" secondAttribute="leading" constant="10" id="916-a2-0Us"/>
+                                <constraint firstItem="JiQ-gB-sPP" firstAttribute="leading" secondItem="MQP-xc-7HA" secondAttribute="leading" constant="20" id="Dht-Zv-as9"/>
+                                <constraint firstItem="rIG-cE-LRW" firstAttribute="top" secondItem="x5R-Jo-38s" secondAttribute="top" id="GN1-z5-0Ep"/>
+                                <constraint firstItem="cRM-nZ-Rmb" firstAttribute="top" secondItem="MQP-xc-7HA" secondAttribute="top" id="HmM-i5-6KG"/>
+                                <constraint firstAttribute="height" constant="300" id="KEX-en-4Y6"/>
+                                <constraint firstItem="x5R-Jo-38s" firstAttribute="top" secondItem="IQy-cy-QCp" secondAttribute="bottom" constant="48.5" id="NjJ-RJ-0hX"/>
+                                <constraint firstItem="cRM-nZ-Rmb" firstAttribute="leading" secondItem="MQP-xc-7HA" secondAttribute="leading" id="Uub-UH-49M"/>
+                                <constraint firstItem="JiQ-gB-sPP" firstAttribute="top" secondItem="x5R-Jo-38s" secondAttribute="bottom" constant="11" id="aAX-iq-Ffm"/>
+                                <constraint firstItem="LKb-hY-IZc" firstAttribute="top" secondItem="JiQ-gB-sPP" secondAttribute="bottom" constant="1" id="caq-m2-vA4"/>
+                                <constraint firstAttribute="trailing" secondItem="JiQ-gB-sPP" secondAttribute="trailing" constant="20" id="hmY-0t-QO6"/>
+                                <constraint firstItem="aIa-xW-z2z" firstAttribute="top" secondItem="JiQ-gB-sPP" secondAttribute="bottom" constant="50" id="lnR-xn-g9x"/>
+                                <constraint firstItem="LKb-hY-IZc" firstAttribute="leading" secondItem="JiQ-gB-sPP" secondAttribute="leading" id="mgd-5j-mkP"/>
+                                <constraint firstItem="aIa-xW-z2z" firstAttribute="centerX" secondItem="MQP-xc-7HA" secondAttribute="centerX" id="n6j-qB-LLN"/>
+                                <constraint firstAttribute="trailing" secondItem="cRM-nZ-Rmb" secondAttribute="trailing" id="onF-zJ-R94"/>
+                                <constraint firstItem="x5R-Jo-38s" firstAttribute="leading" secondItem="rIG-cE-LRW" secondAttribute="trailing" constant="10" id="r0J-Er-ZCL"/>
+                                <constraint firstItem="LKb-hY-IZc" firstAttribute="trailing" secondItem="JiQ-gB-sPP" secondAttribute="trailing" id="uxM-Qn-g2Y"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="MQP-xc-7HA" secondAttribute="trailing" constant="16" id="jC4-CJ-gk0"/>
+                        <constraint firstItem="MQP-xc-7HA" firstAttribute="leading" secondItem="mT4-pj-RM7" secondAttribute="leading" constant="16" id="tWV-Lr-Y9P"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.66157427229999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="mT4-pj-RM7" secondAttribute="bottom" id="3lC-dT-JNr"/>
+                <constraint firstItem="MQP-xc-7HA" firstAttribute="centerX" secondItem="39M-dY-Vlz" secondAttribute="centerX" id="WNX-PB-LU7"/>
+                <constraint firstItem="MQP-xc-7HA" firstAttribute="centerY" secondItem="39M-dY-Vlz" secondAttribute="centerY" id="e02-4d-NRX"/>
+                <constraint firstItem="mT4-pj-RM7" firstAttribute="leading" secondItem="39M-dY-Vlz" secondAttribute="leading" id="jhx-Sz-6cg"/>
+                <constraint firstAttribute="trailing" secondItem="mT4-pj-RM7" secondAttribute="trailing" id="pop-V8-c7h"/>
+                <constraint firstItem="mT4-pj-RM7" firstAttribute="top" secondItem="39M-dY-Vlz" secondAttribute="top" id="wQI-l7-ji4"/>
+            </constraints>
+            <connections>
+                <outlet property="coupentextf" destination="JiQ-gB-sPP" id="iD4-9R-ybv"/>
+            </connections>
+            <point key="canvasLocation" x="32" y="128"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cupon_code" width="23" height="23"/>
+    </resources>
+</document>
