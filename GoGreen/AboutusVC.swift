@@ -23,7 +23,7 @@ class AboutusVC: UIViewController
         self.topview.layer.shadowRadius = 10.0
         self.topview.layer.masksToBounds = false
         
-        let url = URL (string: "http://13.126.37.218/gogreen/terms-of-use1.html")
+        let url = URL (string: "http://13.126.37.218/gogreenstaging/terms-of-use1.html")
         let requestObj = URLRequest(url: url!)
         webview.loadRequest(requestObj)
     }

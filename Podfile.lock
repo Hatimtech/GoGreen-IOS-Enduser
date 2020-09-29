@@ -188,7 +188,7 @@ DEPENDENCIES:
   - YLGIFImage
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - AKSideMenu
     - Alamofire
@@ -288,4 +288,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 1b3dc73b7329441d3971d9df21d480881a3fb9fc
 
-COCOAPODS: 1.6.0.beta.1
+COCOAPODS: 1.9.3

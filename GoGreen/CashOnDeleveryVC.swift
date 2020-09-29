@@ -348,7 +348,8 @@ class CashOnDeleveryVC: UIViewController
             }
         }
         
-        email = "karan@ripenapps.com"
+        email = "mustafazoeb@gogreen-uae.com"
+        
         secretKey = "nCqyPKUQExNhDKiQqZpRF4Bp9dNFH875KyEzizqX7eeKYxBpw1gc5SCe5pUNx1TizxSS7iPew4ZvCAV8BbkH4WWamQYUSRcrp4kw"
 
         let orderID = String(Int((Date().timeIntervalSince1970 * 1000.0).rounded()))

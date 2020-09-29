@@ -59,7 +59,6 @@ extension UIScrollView {
     }
 }
 
-
 extension UIPanGestureRecognizer {
     func elasticTranslation(in view: UIView?, withLimit limit: CGSize, fromOriginalCenter center: CGPoint, applyingRatio ratio: CGFloat = 0.20) -> CGPoint {
         let translation = self.translation(in: view)

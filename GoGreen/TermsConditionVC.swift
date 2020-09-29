@@ -21,7 +21,7 @@ class TermsConditionVC: UIViewController
         self.topview.layer.shadowOpacity = 0.3
         self.topview.layer.shadowRadius = 10.0
         self.topview.layer.masksToBounds = false
-        let url  = URL(string: "http://13.126.37.218/gogreen/gogreen-info.html")
+        let url  = URL(string: "http://13.126.37.218/gogreenstaging/gogreen-info.html")
         let request:URLRequest = URLRequest(url: url!)
         webview.loadRequest(request)
        

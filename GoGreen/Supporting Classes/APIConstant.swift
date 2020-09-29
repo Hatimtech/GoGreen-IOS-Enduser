@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-//let baseApiUrl = "http://13.126.37.218/gogreen/index.php/" // production
-let baseApiUrl = "http://52.66.242.183/gogreen/index.php/" // new url
+let baseApiUrl = "http://13.126.37.218/gogreenstaging/index.php/" // production
+//let baseApiUrl = "http://52.66.242.183/gogreen/index.php/" // new url
 //let baseApiUrl =  "http://13.126.99.14/gogreen/index.php/"  // dev
 //let baseApiUrl =  "http://13.126.99.14/gogreen/index.php/"  // dev
 //"Mp0s7ZpjVLRknXNfG5qIznDLunSnBH1o71Qe0gxW2pgqm4F3a5MJtpvXNnlp5mNdoErpVZlXpBoMG3QQ9CzC14AOsWeyi1LGGd6C"
