@@ -19,8 +19,6 @@ class BookServiceVC: UIViewController , changefrquencyindexdelegate
         @IBOutlet var topview : UIView!
         @IBOutlet var upperview : UIView!
         @IBOutlet var upperinnnerview : UIView!
-//        @IBOutlet var selectpackageview : UIView!
-//        @IBOutlet var selectpackageinnerview : UIView!
         @IBOutlet var selectpackagevtypeview : UIView!
         @IBOutlet var selectpackagevtypeinnerview : UIView!
         @IBOutlet var Bookserviectableview : UITableView!

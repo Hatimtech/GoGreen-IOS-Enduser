@@ -412,7 +412,6 @@ class OrderConfirmationVC: UIViewController , coupencodedelegate
                      "coupan_code": Coupencode,
                      "user_id":user_id,
                      "amount": self.totalamount] as [String : Any]
-        print(param)
         ServiceManager.instance.request(method: .post, URLString: inser_cardetail, parameters: param as [String : AnyObject] , encoding: JSONEncoding.default, headers: headers)
         { (success, dictionary, error) in
             print(dictionary ?? "no")

@@ -911,7 +911,7 @@
 				CODE_SIGN_ENTITLEMENTS = GoGreen/GoGreen.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 2.0;
 				DEVELOPMENT_TEAM = 33S5BD7X5H;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -931,7 +931,7 @@
 					"$(PROJECT_DIR)/GoGreen/Demo\\ Merchants",
 					"$(PROJECT_DIR)/GoGreen/Demo\\ Merchants",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ripen.gogreen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -950,7 +950,7 @@
 				CODE_SIGN_ENTITLEMENTS = GoGreen/GoGreen.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 2.0;
 				DEVELOPMENT_TEAM = 33S5BD7X5H;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -970,7 +970,7 @@
 					"$(PROJECT_DIR)/GoGreen/Demo\\ Merchants",
 					"$(PROJECT_DIR)/GoGreen/Demo\\ Merchants",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ripen.gogreen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

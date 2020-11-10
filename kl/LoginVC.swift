@@ -14,10 +14,10 @@ import FBSDKLoginKit
 import MBProgressHUD
 import GoogleSignIn
 import IQKeyboardManagerSwift
+import AuthenticationServices
 
 
-
-class LoginVC: UIViewController , GIDSignInDelegate ,GIDSignInUIDelegate , UITextFieldDelegate
+class LoginVC: UIViewController , GIDSignInDelegate ,GIDSignInUIDelegate , UITextFieldDelegate,ASAuthorizationControllerDelegate
 {
     
     @IBOutlet weak var txtemail: UITextField!
@@ -26,6 +26,9 @@ class LoginVC: UIViewController , GIDSignInDelegate ,GIDSignInUIDelegate , UITex
     var Signuppopview : Signupview!
     var namestr  = ""
     var logintype = ""
+   @IBOutlet var signInButtonStack : UIView!
+
+    
 
     override func viewDidLoad()
     {
@@ -49,12 +52,12 @@ class LoginVC: UIViewController , GIDSignInDelegate ,GIDSignInUIDelegate , UITex
     {
        txtemail.delegate = self
        txtPassword.delegate = self
-        
+        self.setUpSignInAppleButton()
         let attributes = [
             NSAttributedStringKey.foregroundColor: UIColor(red: 35 / 255.0, green: 31 / 255.0, blue: 32 / 255.0, alpha: 1.0),
             NSAttributedStringKey.font : UIFont(name:"Montserrat-Light", size: 14)! // Note the !
         ]
-        txtemail.attributedPlaceholder = NSAttributedString(string: "Enter Your Email", attributes:attributes)
+        txtemail.attributedPlaceholder = NSAttributedString(string: "Enter Your Email or Mobile", attributes:attributes)
         txtPassword.attributedPlaceholder = NSAttributedString(string: "Enter Your Password", attributes:attributes)
       
         //self.Loginbtn.applyGradient(colors: [UIColor(red: 7 / 255.0, green: 176 / 255.0, blue: 76 / 255.0, alpha: 1.0).cgColor , UIColor(red: 187 / 255.0, green: 213 / 255.0, blue: 69 / 255.0, alpha: 1.0).cgColor])
@@ -127,9 +130,9 @@ class LoginVC: UIViewController , GIDSignInDelegate ,GIDSignInUIDelegate , UITex
     
     @IBAction func taponLogin(sender : UIButton)
     {
-        if (txtemail?.text?.isEmpty)! || isValidEmail(testStr: (txtemail?.text!)!) == false
+        if (txtemail?.text?.isEmpty)!
         {
-            let alert = UIAlertController(title: AppName, message: "please enter valid mail id", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: AppName, message: "please enter valid mail id or phone number with country code", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
@@ -141,7 +144,7 @@ class LoginVC: UIViewController , GIDSignInDelegate ,GIDSignInUIDelegate , UITex
         }
         else
         {
-            self.HitserviceForLogin(logintype: "EM", SocialId: "", emailid: txtemail.text!, password: txtPassword.text!)
+            self.HitserviceForLogin(logintype: txtemail.text!.isPhoneNumber ? "PH" : "EM", SocialId: "", emailid: txtemail.text!, password: txtPassword.text!)
             
         }
     }
@@ -197,6 +200,52 @@ class LoginVC: UIViewController , GIDSignInDelegate ,GIDSignInUIDelegate , UITex
     }
     
     
+    //Apple Id Sign In
+    
+    func setUpSignInAppleButton() {
+        if #available(iOS 13.0, *) {
+            let authorizationButton = ASAuthorizationAppleIDButton()
+            authorizationButton.addTarget(self, action: #selector(handleAppleIdRequest), for: .touchUpInside)
+               //  authorizationButton.cornerRadius = 10
+                 //Add button on some view or stack
+                 self.signInButtonStack.addSubview(authorizationButton)
+        } else {
+            // Fallback on earlier versions
+        }
+     
+    }
+  
+    @available(iOS 13.0, *)
+    @objc func handleAppleIdRequest() {
+      
+            let appleIDProvider = ASAuthorizationAppleIDProvider()
+            let request = appleIDProvider.createRequest()
+               request.requestedScopes = [.fullName, .email]
+               let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+               authorizationController.delegate = self
+               authorizationController.performRequests()
+       
+   
+    }
+    
+    @available(iOS 13.0, *)
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+    if let appleIDCredential = authorization.credential as?  ASAuthorizationAppleIDCredential {
+    let userIdentifier = appleIDCredential.user
+    let fullName = appleIDCredential.fullName
+    let email = appleIDCredential.email
+      
+   self.HitserviceForLogin(logintype: "GL", SocialId: userIdentifier, emailid: email!, password: "")
+
+    }
+    }
+    
+    @available(iOS 13.0, *)
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+    // Handle error.
+    }
+    
+    
     func isValidEmail(testStr:String) -> Bool
     {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
@@ -223,8 +272,8 @@ class LoginVC: UIViewController , GIDSignInDelegate ,GIDSignInUIDelegate , UITex
                      "social_id": SocialId,
                      "device_type":"ios" ,
                      "email": emailid,
+                     "phone_number":emailid,
                      "password": password] as [String : Any]
-        print(param)
         ServiceManager.instance.request(method: .post, URLString: LOGIN, parameters: param as [String : AnyObject], encoding: JSONEncoding.default, headers: headers)
         { (success, dictionary, error) in
             print(dictionary ?? "no")
