@@ -184,9 +184,10 @@ class SMSVerificationphone: UIViewController, UITextFieldDelegate , mobilenumber
     
     
     func logCompleteRegistrationEvent(registrationMethod : String) {
-        let params : AppEvent.ParametersDictionary = [.registrationMethod : registrationMethod]
-        let event = AppEvent(name: .completedRegistration, parameters: params)
-        AppEventsLogger.log(event)
+        let params  = ["registrationMethod" : registrationMethod]
+        AppEvents.logEvent(AppEvents.Name(rawValue: "completedRegistration"),  parameters: params)
+
+     
     }
 
     @objc func textFieldDidChange(textField: UITextField)

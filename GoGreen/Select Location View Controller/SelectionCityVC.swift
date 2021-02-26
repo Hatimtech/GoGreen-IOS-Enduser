@@ -437,6 +437,7 @@ class SelectionCityVC: UIViewController , UITextFieldDelegate , MFMailComposeVie
             {
                 if  let dict1 = dictionary?["data"] as? Dictionary<String,AnyObject>
                 {
+                    print(dict1)
                     if let statuscode = dict1["resCode"] as? NSNumber
                     {
                         if statuscode == 1

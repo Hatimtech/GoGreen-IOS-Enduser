@@ -196,9 +196,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate ,AKSideMenuDelegate
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool
     {
-        let canHandlefacebookURL = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+        let canHandlefacebookURL = ApplicationDelegate.shared.application(app, open: url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
         
-        let canHandleGoogleUrl =  GIDSignIn.sharedInstance().handle(url, sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String, annotation: [:])
+        let canHandleGoogleUrl =  GIDSignIn.sharedInstance().handle(url)
         
         if canHandleGoogleUrl
         {
@@ -319,10 +319,9 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 
 extension AppDelegate : MessagingDelegate {
     
-    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
         
-        NSLog("Firebase registration token: = %@", fcmToken )
-        let dataDict:[String: String] = ["token": fcmToken]
+        let dataDict:[String: String] = ["token": fcmToken ?? ""]
         if (UserDefaults.standard.value(forKey: "logindict_info") as? Dictionary<String,AnyObject>) != nil
         {
             let result = UserDefaults.standard.object(forKey: "logindict_info") as! Dictionary<String,AnyObject>
@@ -336,10 +335,10 @@ extension AppDelegate : MessagingDelegate {
                 
                 if package_data == "2"
                 {
-                    hitApiForPushNotification(fcmDeviceToken: fcmToken, result: result)
+                    hitApiForPushNotification(fcmDeviceToken: fcmToken ?? "", result: result)
                 }else
                 {
-                    hitApiForPushNotification(fcmDeviceToken: fcmToken, result: result)
+                    hitApiForPushNotification(fcmDeviceToken: fcmToken ?? "", result: result)
                 }
             }
         }

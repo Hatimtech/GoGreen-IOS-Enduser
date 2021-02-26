@@ -12,6 +12,7 @@ import Alamofire
 import IQKeyboardManagerSwift
 import MBProgressHUD
 import FacebookCore
+import FBSDKCoreKit
 
 class CashOnDeleveryVC: UIViewController
 {
@@ -235,7 +236,8 @@ class CashOnDeleveryVC: UIViewController
                         if statuscode == 1
                         {
                             self.logNewPackegeActivateEvent(new_Packege_Activate: "New_Packege_Activate")
-                            AppEvent.purchased(amount: 10.34, currency: "AED", extraParameters: ["":""])
+                            AppEvents.logPurchase(10.34, currency: "AED", parameters: ["":""])
+//                            AppEvent.purchased(amount: 10.34, currency: "AED", extraParameters: ["":""])
                             let alert = UIAlertController(title: AppName, message: "Thank you for your order, your car service will commence shortly", preferredStyle: UIAlertControllerStyle.alert)
                             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                             self.present(alert, animated: true, completion: nil)
@@ -277,10 +279,19 @@ class CashOnDeleveryVC: UIViewController
      * For more details, please take a look at:
      * developers.facebook.com/docs/swift/appevents
      */
+//    func logNewPackegeActivateEvent(new_Packege_Activate : String) {
+//        let params : AppEvent.ParametersDictionary = ["New_Packege_Activate" : new_Packege_Activate]
+//        let event = AppEvent(name: "Packege Activate", parameters: params)
+//        AppEventsLogger.log(event)
+//    }
+
+    
+    
     func logNewPackegeActivateEvent(new_Packege_Activate : String) {
-        let params : AppEvent.ParametersDictionary = ["New_Packege_Activate" : new_Packege_Activate]
-        let event = AppEvent(name: "Packege Activate", parameters: params)
-        AppEventsLogger.log(event)
+        let params = ["New_Packege_Activate" : new_Packege_Activate]
+       
+        AppEvents.logEvent(AppEvents.Name(rawValue: "Packege Activate"), parameters: params)
+
     }
     
     @IBAction func taptocashondelevery(sender : UIButton)
@@ -314,7 +325,6 @@ class CashOnDeleveryVC: UIViewController
         let emailstr = result["email"]!
         let user_Name = result["name"]!
         var user_Phone = result["phone_number"]!
-        print(emailstr )
 //        if user_Phone.hasPrefix("+971"){
 //            
 //        }else{
@@ -349,46 +359,90 @@ class CashOnDeleveryVC: UIViewController
         }
         
         email = "mustafazoeb@gogreen-uae.com"
-        
-        secretKey = "nCqyPKUQExNhDKiQqZpRF4Bp9dNFH875KyEzizqX7eeKYxBpw1gc5SCe5pUNx1TizxSS7iPew4ZvCAV8BbkH4WWamQYUSRcrp4kw"
+    secretKey =    "a8THmNmTSccqeU7h4RS5YElM3qANlnQbCFlqIr9h5YWj1Ff2hecKbB1k4CYzpPGqoLExJcyPD3X52W7UBQg91WOrQGU0lM6zvbPw"
+       
+        // Old Secret Key
+//        secretKey = "nCqyPKUQExNhDKiQqZpRF4Bp9dNFH875KyEzizqX7eeKYxBpw1gc5SCe5pUNx1TizxSS7iPew4ZvCAV8BbkH4WWamQYUSRcrp4kw"
 
         let orderID = String(Int((Date().timeIntervalSince1970 * 1000.0).rounded()))
         let bundle = Bundle(url: Bundle.main.url(forResource: ApplicationResources.kFrameworkResourcesBundle, withExtension: "bundle")!)
-         self.initialSetupViewController = PTFWInitialSetupViewController(nibName: ApplicationXIBs.kPTFWInitialSetupView,
-                                                  bundle: bundle,
-                                                  andWithViewFrame: self.view.frame,
-                                                  andWithAmount: Float(totalamount - self.discount),
-                                                  andWithCustomerTitle: user_Name,
-                                                  andWithCurrencyCode: "AED",
-                                                  andWithTaxAmount: 0.0,
-                                                  andWithSDKLanguage: "en",
-                                                  andWithShippingAddress: GoGreenManeger.instance.selectedlocalityname  +  ", " + GoGreenManeger.instance.selectedcity,
-                                                  andWithShippingCity: GoGreenManeger.instance.selectedlocalityname,
-                                                  andWithShippingCountry: "ARE",
-                                                  andWithShippingState: GoGreenManeger.instance.selectedcity,
-                                                  andWithShippingZIPCode: "00971",
-                                                  andWithBillingAddress: GoGreenManeger.instance.selectedlocalityname  +  ", " + GoGreenManeger.instance.selectedcity,
-                                                  andWithBillingCity: GoGreenManeger.instance.selectedlocalityname,
-                                                  andWithBillingCountry: "ARE",
-                                                  andWithBillingState: GoGreenManeger.instance.selectedcity,
-                                                  andWithBillingZIPCode: "00971",
-                                                  andWithOrderID: orderID,
-                                                  andWithPhoneNumber: user_Phone,
-                                                  andWithCustomerEmail: emailstr,
-                                                  andIsTokenization: true,
-                                                  andWithMerchantEmail: email,
-                                                  andWithMerchantSecretKey: secretKey,
-                                                  andWithAssigneeCode: "SDK",
-                                                  andWithThemeColor: UIColor.green,
-                                                  andIsThemeColorLight: true)
+        
+        self.initialSetupViewController = PTFWInitialSetupViewController.init(
+            bundle: bundle,
+            andWithViewFrame: self.view.frame,
+            andWithAmount: Float(totalamount - self.discount),
+            andWithCustomerTitle: user_Name,
+            andWithCurrencyCode: "AED",
+            andWithTaxAmount: 0.0,
+            andWithSDKLanguage: "en",
+            andWithShippingAddress: GoGreenManeger.instance.selectedlocalityname  +  ", " + GoGreenManeger.instance.selectedcity,
+            andWithShippingCity: GoGreenManeger.instance.selectedlocalityname,
+            andWithShippingCountry: "ARE",
+            andWithShippingState: GoGreenManeger.instance.selectedcity,
+            andWithShippingZIPCode: "00971",
+            andWithBillingAddress: GoGreenManeger.instance.selectedlocalityname  +  ", " + GoGreenManeger.instance.selectedcity,
+            andWithBillingCity: GoGreenManeger.instance.selectedlocalityname,
+            andWithBillingCountry: "ARE",
+            andWithBillingState: GoGreenManeger.instance.selectedcity,
+            andWithBillingZIPCode: "00971",
+            andWithOrderID: orderID,
+            andWithPhoneNumber: user_Phone,
+            andWithCustomerEmail: emailstr,
+            andIsTokenization:true,
+            andIsPreAuth: false,
+            andWithMerchantEmail:email,
+            andWithMerchantSecretKey: secretKey,
+            andWithMerchantRegion: "emirates",
+            andWithAssigneeCode: "SDK",
+            andWithThemeColor: UIColor.green,
+            andIsThemeColorLight: true)
+        
+        
+        
+        
+//        self.initialSetupViewController = PTFWInitialSetupViewController(nibName: ApplicationXIBs.kPTFWInitialSetupView,
+//                                                  bundle: bundle,
+//                                                  andWithViewFrame: self.view.frame,
+//                                                  andWithAmount: Float(totalamount - self.discount),
+//                                                  andWithCustomerTitle: user_Name,
+//                                                  andWithCurrencyCode: "AED",
+//                                                  andWithTaxAmount: 0.0,
+//                                                  andWithSDKLanguage: "en",
+//                                                  andWithShippingAddress: GoGreenManeger.instance.selectedlocalityname  +  ", " + GoGreenManeger.instance.selectedcity,
+//                                                  andWithShippingCity: GoGreenManeger.instance.selectedlocalityname,
+//                                                  andWithShippingCountry: "ARE",
+//                                                  andWithShippingState: GoGreenManeger.instance.selectedcity,
+//                                                  andWithShippingZIPCode: "00971",
+//                                                  andWithBillingAddress: GoGreenManeger.instance.selectedlocalityname  +  ", " + GoGreenManeger.instance.selectedcity,
+//                                                  andWithBillingCity: GoGreenManeger.instance.selectedlocalityname,
+//                                                  andWithBillingCountry: "ARE",
+//                                                  andWithBillingState: GoGreenManeger.instance.selectedcity,
+//                                                  andWithBillingZIPCode: "00971",
+//                                                  andWithOrderID: orderID,
+//                                                  andWithPhoneNumber: user_Phone,
+//                                                  andWithCustomerEmail: emailstr,
+//                                                  andIsTokenization: true,
+//                                                  andWithMerchantEmail: email,
+//                                                  andWithMerchantSecretKey: secretKey,
+//                                                  andWithAssigneeCode: "SDK",
+//                                                  andWithThemeColor: UIColor.green,
+//                                                  andIsThemeColorLight: true)
                 
         weak var weakSelf = self
         self.initialSetupViewController.didReceiveBackButtonCallback = {
             weakSelf?.handleBackButtonTapEvent()
         }
         
-        self.initialSetupViewController.didReceiveFinishTransactionCallback = {(responseCode, result, transactionID, tokenizedCustomerEmail, tokenizedCustomerPassword, token, transactionState) in
+        
+        
+        
+        
+        
+        
+//        self.initialSetupViewController.didReceiveFinishTransactionCallback = {(responseCode, result, transactionID, tokenizedCustomerEmail, tokenizedCustomerPassword, token, transactionState) in
 
+        
+        self.initialSetupViewController.didReceiveFinishTransactionCallback = {(responseCode, result, transactionID, tokenizedCustomerEmail, tokenizedCustomerPassword, token, transactionState, statementReference, traceCode) in
             if responseCode == 100 {
                 self.trasactionid = String(transactionID)
                print(result)

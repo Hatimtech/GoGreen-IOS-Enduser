@@ -669,9 +669,10 @@ class EnterCarDetailVC: UIViewController , Datavaluechangedelegate , UITextField
      * developers.facebook.com/docs/swift/appevents
      */
     func logCarRegistrationEvent(new_car_registration : String) {
-        let params : AppEvent.ParametersDictionary = ["New_car_registration" : new_car_registration]
-        let event = AppEvent(name: "CarRegistration", parameters: params)
-        AppEventsLogger.log(event)
+        let params  = ["New_car_registration" : new_car_registration]
+        AppEvents.logEvent(AppEvents.Name(rawValue: "CarRegistration"),  parameters: params)
+
+       
     }
 
     /**
@@ -679,14 +680,15 @@ class EnterCarDetailVC: UIViewController , Datavaluechangedelegate , UITextField
      * developers.facebook.com/docs/swift/appevents
      */
     func logAddToWishlistEvent(contentData : String, contentId : String, contentType : String, currency : String, price : Double) {
-        let params : AppEvent.ParametersDictionary = [
-            .content : contentData,
-            .contentId : contentId,
-            .contentType : contentType,
-            .currency : currency
+        let params  = [
+            "content" : contentData,
+            "contentId" : contentId,
+            "contentType" : contentType,
+            "currency" : currency
         ]
-        let event = AppEvent(name: .addedToWishlist, parameters: params, valueToSum: price)
-        AppEventsLogger.log(event)
+        AppEvents.logEvent(AppEvents.Name(rawValue: "addedToWishlist"), valueToSum: price, parameters: params)
+
+      
     }
     
     

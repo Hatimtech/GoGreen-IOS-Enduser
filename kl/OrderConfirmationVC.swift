@@ -14,6 +14,7 @@ import IQKeyboardManagerSwift
 import FacebookCore
 
 
+
 class OrderConfirmationVC: UIViewController , coupencodedelegate
 {
    
@@ -97,16 +98,17 @@ class OrderConfirmationVC: UIViewController , coupencodedelegate
      * developers.facebook.com/docs/swift/appevents
      */
     func logInitiateCheckoutEvent(contentData : String, contentId : String, contentType : String, numItems : Int, paymentInfoAvailable : Bool, currency : String, totalPrice : Double) {
-        let params : AppEvent.ParametersDictionary = [
-            .content : contentData,
-            .contentId : contentId,
-            .contentType : contentType,
-            .itemCount : NSNumber(value:numItems),
-            .paymentInfoAvailable : NSNumber(value: paymentInfoAvailable ? 1 : 0),
-            .currency : currency
-        ]
-        let event = AppEvent(name: .initiatedCheckout, parameters: params, valueToSum: totalPrice)
-        AppEventsLogger.log(event)
+        let params  = [
+            "content" : contentData,
+            "contentId" : contentId,
+            "contentType" : contentType,
+            "itemCount" : NSNumber(value:numItems),
+            "paymentInfoAvailable" : NSNumber(value: paymentInfoAvailable ? 1 : 0),
+            "currency" : currency
+        ] as [String : Any]
+        AppEvents.logEvent(AppEvents.Name(rawValue: "initiatedCheckout"), valueToSum: totalPrice, parameters: params)
+
+       
     }
     
     

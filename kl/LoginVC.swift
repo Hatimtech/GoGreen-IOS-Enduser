@@ -17,7 +17,7 @@ import IQKeyboardManagerSwift
 import AuthenticationServices
 
 
-class LoginVC: UIViewController , GIDSignInDelegate ,GIDSignInUIDelegate , UITextFieldDelegate,ASAuthorizationControllerDelegate
+class LoginVC: UIViewController , GIDSignInDelegate  , UITextFieldDelegate,ASAuthorizationControllerDelegate
 {
     
     @IBOutlet weak var txtemail: UITextField!
@@ -35,7 +35,7 @@ class LoginVC: UIViewController , GIDSignInDelegate ,GIDSignInUIDelegate , UITex
         super.viewDidLoad()
 //        Crashlytics.sharedInstance().crash()
         GIDSignIn.sharedInstance().delegate = self
-        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().presentingViewController = self
         GIDSignIn.sharedInstance().clientID = GoogleClientid
         SetUI()
 
@@ -153,11 +153,11 @@ class LoginVC: UIViewController , GIDSignInDelegate ,GIDSignInUIDelegate , UITex
     
     @IBAction func tapfacebookbtn(sender : UIButton)
     {
-        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
-        fbLoginManager.logIn(withReadPermissions: ["email"], from: self) { (result, error) -> Void in
+        let fbLoginManager : LoginManager = LoginManager()
+        fbLoginManager.logIn(permissions: ["email"], from: self) { (result, error) in
             if (error == nil)
             {
-                let fbloginresult : FBSDKLoginManagerLoginResult = result!
+                let fbloginresult : LoginManagerLoginResult = result!
                 if (result?.isCancelled)!
                 {
                     return
@@ -170,12 +170,13 @@ class LoginVC: UIViewController , GIDSignInDelegate ,GIDSignInUIDelegate , UITex
                 }
             }
         }
+       
     }
     
     func getFBUserData()
     {
-        if((FBSDKAccessToken.current()) != nil){
-            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
+        if((AccessToken.current) != nil){
+            GraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
                 if (error == nil)
                 {
                     let dict = result as! [String : AnyObject]
@@ -232,10 +233,16 @@ class LoginVC: UIViewController , GIDSignInDelegate ,GIDSignInUIDelegate , UITex
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
     if let appleIDCredential = authorization.credential as?  ASAuthorizationAppleIDCredential {
     let userIdentifier = appleIDCredential.user
-    let fullName = appleIDCredential.fullName
-    let email = appleIDCredential.email
-      
-   self.HitserviceForLogin(logintype: "GL", SocialId: userIdentifier, emailid: email!, password: "")
+//    let fullName = appleIDCredential.fullName
+        let fname = appleIDCredential.fullName?.givenName ?? ""
+        let lname = appleIDCredential.fullName?.familyName ?? ""
+        
+        self.namestr = ((fname + lname) == "") ? "Guest" : fname + " " + lname
+        print(namestr)
+    let email = appleIDCredential.email ?? ""
+    self.logintype = "GL"
+
+        self.HitserviceForLogin(logintype: "GL", SocialId: userIdentifier, emailid: email, password: "")
 
     }
     }

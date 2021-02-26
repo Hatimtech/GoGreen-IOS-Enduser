@@ -10,6 +10,7 @@ target 'GoGreen' do
         pod 'AlamofireImage', '~> 3.1'
         pod 'PullToRefresher', '~> 3.0'
         pod 'FacebookCore'
+        pod 'FBSDKCoreKit'
         pod 'FacebookLogin'
         pod 'FacebookShare'
         pod 'FBSDKMarketingKit'
@@ -38,7 +39,18 @@ target 'GoGreen' do
         pod 'Reachability'
         pod 'AFNetworking'
         pod 'CountryPickerSwift', '~> 1.8.0'
+	pod 'PayTabs', '~> 4.3.2'
        
         
 //
 end
+#To enable bitcode flag
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['BITCODE_GENERATION_MODE'] = 'bitcode'
+            config.build_settings['ENABLE_BITCODE'] = 'YES'
+        end
+    end
+end
+

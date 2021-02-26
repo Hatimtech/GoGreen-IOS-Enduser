@@ -13,6 +13,7 @@ import Alamofire
 import MBProgressHUD
 import IQKeyboardManagerSwift
 import FacebookCore
+import FBSDKCoreKit
 
 class BookServiceVC: UIViewController , changefrquencyindexdelegate
 {
@@ -410,17 +411,31 @@ class BookServiceVC: UIViewController , changefrquencyindexdelegate
      * For more details, please take a look at:
      * developers.facebook.com/docs/swift/appevents
      */
-    func logAddToCartEvent(contentData : String, contentId : String, contentType : String, currency : String, price : Double) {
-        let params : AppEvent.ParametersDictionary = [
-            .content : contentData,
-            .contentId : contentId,
-            .contentType : contentType,
-            .currency : currency
-        ]
-        let event = AppEvent(name: .addedToCart, parameters: params, valueToSum: price)
-        AppEventsLogger.log(event)
-    }
+//    func logAddToCartEvent(contentData : String, contentId : String, contentType : String, currency : String, price : Double) {
+//        let params : AppEvent.ParametersDictionary = [
+//            .content : contentData,
+//            .contentId : contentId,
+//            .contentType : contentType,
+//            .currency : currency
+//        ]
+//        let event = AppEvent(name: .addedToCart, parameters: params, valueToSum: price)
+//        AppEventsLogger.log(event)
+//    }
+//
     
+    //New FacebookSDK
+    
+    func logAddToCartEvent(contentData : String, contentId : String, contentType : String, currency : String, price : Double) {
+        let params  = [
+            "content" : contentData,
+            "contentId" : contentId,
+            "contentType" : contentType,
+            "currency" : currency
+        ]
+        
+        AppEvents.logEvent(AppEvents.Name(rawValue: "addedToCart"), valueToSum: price, parameters: params)
+
+    }
    
     
     func calculateprice()
@@ -497,11 +512,22 @@ class BookServiceVC: UIViewController , changefrquencyindexdelegate
     }
     
     
+//    func logConfirmCarPackageEvent(confirm_Car_Package : String) {
+//        let params : AppEvent.ParametersDictionary = ["Confirm_Car_Package" : confirm_Car_Package]
+//        let event = AppEvent(name: "Car Package", parameters: params)
+//        AppEventsLogger.log(event)
+//    }
+  
+    //New Facebook SDK
     func logConfirmCarPackageEvent(confirm_Car_Package : String) {
-        let params : AppEvent.ParametersDictionary = ["Confirm_Car_Package" : confirm_Car_Package]
-        let event = AppEvent(name: "Car Package", parameters: params)
-        AppEventsLogger.log(event)
+        let params = ["Confirm_Car_Package" : confirm_Car_Package]
+       
+        AppEvents.logEvent(AppEvents.Name(rawValue: "Car Package"), parameters: params)
+
+        
     }
+    
+    
     
     func getPercentageVaueForIndex(sIndex : Int) -> Double {
         let percentage = 0.0
